@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-char copy_str(char *dest, char *src);
+#include "../700.CommonFiles/StringFunction.h"
 
 struct Books {
     char name[30]; //책제목
@@ -21,16 +20,4 @@ int main() {
     printf("출판사 : %s \n", Harry_Porter.publ);
     
     return 0;
-}
-
-char copy_str(char *dest, char *src) {
-    while (*src) {
-        *dest = *src;
-        src++;
-        dest++;
-    }
-
-    *dest = '\0';
-
-    return 1;
 }
